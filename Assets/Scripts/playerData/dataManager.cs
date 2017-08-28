@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class dataManager : MonoBehaviour {
-	public int partidasParaAd;
+	
 	public playerData play;
 	public achievementManager achievs;
 	
@@ -14,6 +14,7 @@ public class dataManager : MonoBehaviour {
 		//play.todosAchievments=achievs.todosAchievments;
 	}
 /*
+	//comentarios deixados para utilizar como exemplo
 	public void newGame(){
 		play.totalJogos++;
 		achievs.enviaLeader((long) play.totalJogos, GPGSIds.leaderboard_amount_of_towers);

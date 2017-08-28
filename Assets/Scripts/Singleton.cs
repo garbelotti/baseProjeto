@@ -8,7 +8,7 @@ public class Singleton : MonoBehaviour
 {
 
     private static Singleton _instance = null;
-    public bool carregaDados, muteSound, noAds;
+    //public bool carregaDados, muteSound, noAds;
     public achievementManager achievs;
     public saveManager jogador;
     public int savedLang;
@@ -131,7 +131,8 @@ public class Singleton : MonoBehaviour
     public void loadScene()
     {
 
-        /*loadP = (GameObject) Instantiate(loadPrefab);
+        /*codigo para criar animacao de loading
+        loadP = (GameObject) Instantiate(loadPrefab);
 		Canvas cn = loadP.GetComponent < Canvas > ();
 		cn.worldCamera = GameObject.Find("Main Camera").GetComponent < Camera > ();
 		loadP.transform.SetParent(gameObject.transform);*/
@@ -155,7 +156,7 @@ public class Singleton : MonoBehaviour
     {
         if (_instance == this)
         {
-
+            
         }
     }
 
@@ -173,7 +174,7 @@ public class Singleton : MonoBehaviour
                 {
                     if (SceneManager.GetActiveScene().name != "Menu")
                     {
-
+                        //se for usar a animacao de loading, faca o "undo" dela aqui
                     }
                 }
                 async.allowSceneActivation = true;

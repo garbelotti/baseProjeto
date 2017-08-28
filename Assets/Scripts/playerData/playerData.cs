@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
@@ -39,15 +38,21 @@ public playerData(int ran){
 }
 
 public void setNewValor(int valor){
+    //extrai o valor raw das variaveis
     int videosTemp=totalVideos;
     int comprasTemp=totalCompras;
     
+    //troca o valor do atributo random e atribui o valor ajustado das novas variaveis
     valor0=valor;
     totalVideos=videosTemp;
     totalCompras=comprasTemp;
 }
 
-
+/*
+    ao gravar os valores, armazena o valor * random em memoria
+    e ao ler os valores retorna o valor/ random em memoria
+    isso é feito para dificultar a localizacao da memoria via leitores de memoria (CheatEngine)
+ */
 public int totalVideos{
 get	{ 	return _totalVideos/valor0;	}
 set {   _totalVideos = value * valor0;  }

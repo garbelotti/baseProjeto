@@ -1,7 +1,21 @@
 ﻿using UnityEngine;
 public class saveManager : MonoBehaviour
 {
-
+    /*classe responsavel pelos controle dos dados armazenados, ela tambem e responsavel por dar o play (ou nao)
+    na musica de background
+    Funcionamento basico:
+    no Awake, ela verifica se teve atualizacao de save, caso necessite de atualizacao de achievments e outras variaveis
+    restaura tambem a classe serializable playerData, contendo as variaveis protegidas* do usuario
+    a gravacao dos dados é feita no applicationpause e quit
+    *a protecao dos dados é apenas para nao ser facil localizar as variaveis via editores de memoria (cheat engine)
+    os gets e sets das variaveis funcionam da seguinte maneira: o dado gravado é sempre multiplicado por um valor (**rn),
+    e quando eh pedido (lido), ele divide por esse valor, e a cada alteracao do dado, os valores d multiplicacao sao
+    trocados.
+    **ex: variavel money = 20 e rn = 10,
+    qdo eu ler a variavel money ele retorna 20/10 = 2
+    porem quando eu fizer um money+=10 ele vai gravar money+ = (10*20)
+    e após esse processo é chamado a funcao newrandom, que faz os ajustes para "trocar" o valor d rn
+    */
     public float version;
     public bool _restore;
     public bool saveTemp;
