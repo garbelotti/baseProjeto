@@ -1,7 +1,7 @@
 # baseProjeto
 Base de projeto Unity (v2017.1b1) contendo:
   
-  Sistema de internacionalização (plugin SmartLanguage)
+  Sistema de internacionalização (plugin SmartLocalization)
   
   Sistema de movimentacao de objetos (plugin DoTween)
   
