@@ -1,5 +1,5 @@
 # baseProjeto
-Base de projeto Unity (v2017.1b1) contendo:
+Base de projeto Unity (v2017.1.0f3) contendo:
   
   Sistema de internacionalização (plugin SmartLocalization)
   
